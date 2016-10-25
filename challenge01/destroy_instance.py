@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 from shade import *
 
 simple_logging(debug=True)

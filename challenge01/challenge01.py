@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 from shade import *
 
 # Parametros de conexion al cloud
