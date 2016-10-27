@@ -55,7 +55,7 @@ curl -L -s https://raw.githubusercontent.com/edseen/cloud-aware/master/challenge
 
 # Creacion de MV
 print "\nServer creation:"
-instance_name = 'edseen-01'
+instance_name = 'edseen'
 testing_instance = conn.create_server(wait=True, auto_ip=True,
     name=instance_name,
     image=image_id,
