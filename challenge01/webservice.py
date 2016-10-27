@@ -21,8 +21,19 @@ print(flavor)
 # Red
 external_network = '7004a83a-13d3-4dcd-8cf5-52af1ace4cae'
 
-# Key
-keypair_name = 'eserna_HP-dv2500'
+# Key pair
+print('Checking for existing SSH keypair...')
+keypair_name = 'eserna-HP-dv2500'
+pub_key_file = '/home/edgardo/.ssh/edgardo-HP-dv2500.pub'
+
+if conn.search_keypairs(keypair_name):
+    print('Keypair already exists. Skipping import.')
+else:
+    print('Adding keypair...')
+    conn.create_keypair(keypair_name, open(pub_key_file, 'r').read().strip())
+
+for keypair in conn.list_keypairs():
+    print(keypair)
 
 # Grupo de seguridad
 print('Checking for existing security groups...')
