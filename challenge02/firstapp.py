@@ -14,11 +14,14 @@ flavors =  conn.list_flavors()
 for flavor in flavors:
     print(flavor)
 
-image_id = '94b5d5ff-50b7-4d4f-ac51-da62e7a4909c'
+# Ubuntu 16.04
+#image_id = '94b5d5ff-50b7-4d4f-ac51-da62e7a4909c'
+# Ubuntu 14.04
+image_id = '95576f28-afed-4b63-93b4-1d07928930da'
 image = conn.get_image(image_id)
 print(image)
 
-flavor_id = '2'
+flavor_id = '3'
 flavor = conn.get_flavor(flavor_id)
 print(flavor)
 
