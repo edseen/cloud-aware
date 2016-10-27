@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
 sudo sed -i -e "/bind-address/d" /etc/mysql/my.cnf
 sudo service mysql restart
 
